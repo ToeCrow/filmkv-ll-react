@@ -5,7 +5,7 @@ import './index.css';
 import App from './App.jsx';
 import { BrowserRouter } from 'react-router-dom';  // Router för hela appen
 import { Provider } from 'react-redux';  // Redux Provider
-import store from './redux/store';  // Importera Redux store
+import store from './redux/store.js';  // Importera Redux store
 
 // Här renderar vi vår app i DOMen och placerar den i root elementet.
 createRoot(document.getElementById('root')).render(

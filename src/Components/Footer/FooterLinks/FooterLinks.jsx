@@ -26,24 +26,24 @@ const FooterLinks = () => {
             </div>
             <div className="footer-lists">
                 <h4 id="följ">FÖLJ OSS</h4>
-                <div class="footer-icon-box">
-                    <div class="icon-cirkel"><i class="fa-brands fa-instagram custom-icon"></i></div>
+                <div className="footer-icon-box">
+                    <div className="icon-cirkel"><i className="fa-brands fa-instagram custom-icon"></i></div>
                     <p>INSTAGRAM</p>
                 </div>
-                <div class="footer-icon-box">
-                    <div class="icon-cirkel"><i class="fa-brands fa-tiktok custom-icon"></i></div>
+                <div className="footer-icon-box">
+                    <div className="icon-cirkel"><i className="fa-brands fa-tiktok custom-icon"></i></div>
                     <p>TIKTOK</p>
                 </div>
-                <div class="footer-icon-box">
-                    <div class="icon-cirkel"><i class="fa-brands fa-facebook-f custom-icon"></i></div>
+                <div className="footer-icon-box">
+                    <div className="icon-cirkel"><i className="fa-brands fa-facebook-f custom-icon"></i></div>
                     <p>FACEBOOK</p>
                 </div>
-                <div class="footer-icon-box">
-                    <div class="icon-cirkel"><i class="fa-solid fa-m custom-icon"></i></div>
+                <div className="footer-icon-box">
+                    <div className="icon-cirkel"><i className="fa-solid fa-m custom-icon"></i></div>
                     <p>MYNEWSDESK</p>
                 </div>
-                <div class="footer-icon-box">
-                    <div class="icon-cirkel"><i class="fa-brands fa-linkedin-in custom-icon"></i></div>
+                <div className="footer-icon-box">
+                    <div className="icon-cirkel"><i className="fa-brands fa-linkedin-in custom-icon"></i></div>
                     <p>LINKEDIN</p>
                 </div>
             </div>
