@@ -4,11 +4,11 @@ import { setMovies } from '../../redux/actions/moviesActions';
 import Top4 from './Top4/Top4';
 import Top510 from './Top510/Top510';
 import Socialmedia from './Socialmedia/Socialmedia';
+import apiKey from '../../../config';
 
 const ShowStartPage = () => {
   const movies = useSelector((state) => state.movies.movies);
   const dispatch = useDispatch();
-  const apiKey = '1d6c43749d5b136ddea6eee248fdc5e2';
   const [loading, setLoading] = useState(false);  // Lägg till loading state
 
   useEffect(() => {
