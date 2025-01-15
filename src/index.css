@@ -1,0 +1,697 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* HEADER */
+header {
+  height: 440px;
+  background-color: #3BBFFB;
+  padding: 50px 50px 0 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#header-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+#logo {
+  background-color: #000000;
+  width: auto;
+  height: auto;
+  color: #ffffff;
+}
+
+#logo-text {
+  display: flex;
+  padding: 5px;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+span {
+  font-size: 46px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  align-items: center;
+  margin: 2px;
+}
+
+#F {
+  color: #FC6719;
+}
+
+#I , #Ä {
+  color: #ffffff;
+}
+
+#L {
+  color: #FFCB14;
+}
+
+#M , #L1 {
+  color: #FF5572;
+}
+
+#K , #L2 {
+  color: #69B3E7;
+}
+
+#V {
+  color: #6BCABA;
+}
+
+/* NAVIGATION */
+nav {
+  position: absolute; /* Gör det oberoende av logon */
+  left: 50%; /* Flyttar nav till mitten av skärmen */
+  transform: translateX(-50%); /* Justerar för att få det exakt i mitten */
+  display: flex;
+  align-items: center;
+  height: 68px;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+}
+
+nav li {
+  margin: 0 10px;
+  font-size: 25px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+
+nav a {
+  text-decoration: none;
+  color: #000;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #FFCB14;
+}
+
+#menu {
+  display: none;
+}
+/* Styling för hamburger-menyn */
+.hamburger-menu {
+  width: 30px; /* Bredd på hela menyn */
+  height: 25px; /* Höjd på hela menyn */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Jämn fördelning av linjer */
+  cursor: pointer; /* Gör att muspekaren ändras till hand-symbol */
+}
+
+.hamburger-menu span {
+  display: block;
+  width: 100%; /* Full bredd av menyn */
+  height: 4px; /* Tjocklek på linjerna */
+  background-color: #000; /* Färg på linjerna */
+  border-radius: 2px; /* Runda kanter */
+  transition: all 0.3s ease; /* Mjuk övergång för animationer */
+}
+
+#animation {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 75px;
+}
+
+#animation img {
+  max-width: 30%;
+}
+
+/* MAIN */
+main {
+  padding: 50px 0 0 0;
+  background: linear-gradient(to top, var(--color1), var(--color2), var(--color3));
+  animation: backgroundAnimation 10s infinite alternate;
+  min-height: 100vh;
+  filter: brightness(1.2); /* Ökar ljusstyrkan */
+}
+
+@keyframes backgroundAnimation {
+  0% {
+    background: linear-gradient(to top, var(--color1), var(--color2), var(--color3));
+  }
+  50% {
+    background: linear-gradient(to top, var(--color4), var(--color5), var(--color6));
+  }
+  100% {
+    background: linear-gradient(to top, var(--color7), var(--color8), var(--color9));
+  }
+}
+
+/* Styling för #top-4 */
+#top-4 {
+  max-width: 1440px;
+  margin: auto;
+  display: grid;
+  grid-template-areas: 
+      "top4-title top1"
+      "top2-4 top2-4";
+  grid-template-columns: 1fr 1fr; /* Fördelar bredden i två kolumner */
+  grid-template-rows: auto 1fr; /* Definierar två rader */
+  gap: 20px; /* Mellanrum mellan elementen */
+  padding: 20px;
+  box-sizing: border-box; /* Säkerställer att padding inte ökar storleken */
+}
+
+h1, h2 {
+  font-size: 55px;
+  font-family: 'Ballo 2', sans-serif;
+  text-align: center;
+  font-weight: 900;
+}
+
+/* Titel i vänster kolumn */
+#top4-title {
+  grid-area: top4-title;
+  margin: 0;
+  align-self: center;
+  justify-self: center;
+  max-width: 65%;
+}
+
+/* Stor bild i höger kolumn */
+#top1 {
+  grid-area: top1;
+  width: 100%; /* Anpassa bilden till utrymmet */
+  height: auto;
+}
+
+#top2-4 .image-container {
+  height: auto;
+}
+
+/* Små bilder under */
+#top2-4 {
+  grid-area: top2-4;
+  display: flex; /* Använder flexbox för att rada upp bilderna horisontellt */
+  justify-content: space-between; /* Lägger bilderna jämnt fördelade */
+  align-items: center; /* Centrera bilderna vertikalt */
+  margin: 50px 0;
+}
+
+#top2-4 .image-container {
+  width: 30%; /* Varje bild tar upp 30% av bredden */
+  height: auto;
+}
+
+/* Container för bild och overlay */
+.image-container {
+  position: relative;
+  display: inline-block;
+  width: 100%; /* Anpassa bredden */
+  border: 3px solid black;
+  transition: box-shadow 0.3s ease, transform 0.3s ease; 
+}
+
+/* Bildens styling */
+.image-container img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Styling för overlay-texten */
+.hover-text {
+  position: absolute;
+  bottom: 0; /* Position längst ner på bilden */
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7); /* Halvtransparent svart bakgrund */
+  color: white;
+  text-align: center;
+  padding: 10px;
+  opacity: 0; /* Dölj texten som standard */
+  transition: opacity 0.3s ease; /* Smidig övergång */
+  font-family: 'Baloo 2', sans-serif;
+  font-size: 18px;
+}
+
+.image-container:hover {
+  transform: translateY(-5px); /* Flyttar elementet uppåt för "lyfteffekt" */
+  box-shadow:  0 15px 25px rgba(0, 0, 0, 0.3), /* Stor suddig skugga nedåt */
+               0 5px 10px rgba(0, 0, 0, 0.2); 
+}
+/* Visa overlay-texten vid hover */
+.image-container:hover {
+  cursor: pointer;
+}
+
+.image-container:hover .hover-text {
+  opacity: 1;
+}
+
+
+#socialmedia {
+  background-color: #6BCABA;
+  margin: 50px 0;
+}
+
+#socialmedia-wrapper {
+  max-width: 1440px;
+  margin: auto;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+#social-title{
+  margin: 0 0 12px 0;
+}
+
+#icon-wrapper{
+  display: flex;
+  flex-direction: row;
+  align-self: center;
+}
+
+.icon-box {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 12px;
+  width: 110px;
+  cursor: pointer;
+}
+
+.icon-box i {
+  align-self: center;
+}
+
+.icon-box p {
+  text-align: center;
+  font-family: 'Baloo 2', sans-serif;
+  font-size: 22px;
+  color: #ffffff;
+  margin-bottom: 0;
+}
+
+.icon-cirkel {
+  background-color: #ffffff;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+}
+
+.custom-icon{
+  font-size: 32px;
+}
+
+#top5-10 {
+  max-width: 1440px;
+  margin: auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+#top5-7 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#top8-10 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 50px 0;
+}
+
+.film-img {
+  width: 30%;
+}
+
+#top5-7 .image-container {
+  width: 30%; /* Varje bild tar upp 30% av bredden */
+  height: auto;
+}
+
+#top8-10 .image-container {
+  width: 30%; /* Varje bild tar upp 30% av bredden */
+  height: auto;
+}
+
+/* FOOTER */
+footer {
+  background-color: #000;
+  padding: 50px 0 0 0;
+  height: auto;
+}
+
+#footer-logo {
+  background-color: #000000;
+  width: 311px;
+  height: 68px;
+  color: #ffffff;
+  margin: auto;
+}
+
+#footer-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  max-width: 1440px;
+  margin: auto;
+}
+
+.footer-lists {
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+}
+
+.footer-lists h4 {
+  font-family: 'baloo 2', sans-serif;
+  font-size: 32px;
+  margin: 50px auto;
+  text-align: center;
+}
+
+#filmkväll {
+  color: #FC6719;
+}
+
+#hemmakväll {
+  color: #6BCABA;
+}
+
+#kundklubben {
+  color: #FFCB14;
+}
+
+#följ {
+  color: #FF5572;
+}
+
+.footer-lists ul {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-icon-box {
+  width: 200px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 12px;
+  /* border: 1px solid white; */
+  justify-content: flex-start;
+  margin: auto;
+  cursor: pointer;
+}
+
+.footer-icon-box p {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  color: #ffffff;
+  margin: 20px 0 20px 20px;
+}
+
+.footer-icon-box i {
+  align-self: center;
+}
+
+footer ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+}
+
+footer li {
+  margin: 0 10px;
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+
+footer a {
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #FFCB14;
+}
+
+#copyright {
+  font-family: 'baloo 2', sans-serif;
+  color: #ffffff;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+@media (max-width: 1252px){
+  nav {
+    position: absolute;
+    margin-left: clamp(36px, 19%, 90px);
+  }
+}
+
+/* !! MEDIA QUERIES ************************************* */
+@media (max-width: 1024px) {
+header {
+  height: auto;
+  padding: 20px 20px 0 20px;
+}
+
+main {
+  padding: 20px 0;
+}
+
+h1, h2 {
+  font-size: 32px;
+}
+
+  #header-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav {
+    position: static; /* Gör så att navigationen följer flödet */
+    transform: none; /* Ta bort centreringsjusteringar */
+    margin-left: 0;
+  }
+  
+  #logo {
+    margin-bottom: 20px;
+  }
+
+  #animation {
+    gap: 50px;
+    margin: 0 10px;
+  }
+
+  #animation img {
+    max-width: 20%;
+  }
+  
+  #top-4 {
+    grid-template-areas: 
+        "top4-title"
+        "top1"
+        "top2-4";
+    grid-template-columns: 1fr; /* Fördelar bredden i en kolumn */
+    grid-template-rows: auto auto auto; /* Definierar tre rader */
+  }
+  
+  #top4-title {
+    max-width: 100%;
+  }
+  
+ nav {
+  padding: 0;
+}
+
+#animation img {
+  width: 30%;
+}
+
+footer {
+  padding: 50px 0 0 0;  
+}
+
+#footer-links {
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.footer-lists {
+  width: 45%; /* Gör kolumnerna två i bredd */
+  margin: 15px;
+}
+
+.footer-lists h4 {
+  margin: 20px;
+}
+
+footer ul {
+  gap: 20px;
+}
+}
+
+/* !! MEDIA QUERIES ************************************* */
+@media (max-width: 660px) {
+
+  #logo {
+    max-width: 90%;
+  }
+
+  
+
+  #animation {
+    display: none;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  nav li {
+    margin: 10px;
+    font-size: 18px;
+  }
+
+  h1, h2 {
+    font-size: 28px;
+  }
+
+  #top2-4, #top5-7, #top8-10 {
+    flex-direction: column;
+    gap: 20px;
+    margin: 0;
+  }
+
+  #top8-10 {
+    margin-top: 20px;
+  }
+
+  #top2-4 .image-container, #top5-7 .image-container, #top8-10 .image-container {
+    width: 100%; /* Varje bild tar upp 30% av bredden */
+    height: auto;
+  }
+
+  #icon-wrapper {
+    max-width: 90%;
+  }
+
+  .icon-box p {
+    display: none;
+  }
+
+  .icon-cirkel {
+    width: 32px;
+  height: 32px;
+  }
+
+  .custom-icon{
+    font-size: 24px;
+  }
+
+  #footer-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-lists {
+  width: 100%; /* Gör kolumnerna två i bredd */
+  margin-bottom: 20px;
+
+}
+
+@media (max-width: 400px) {
+  header {
+    height: auto;
+    padding-bottom: 10px;
+  }
+
+  #logo-text span {
+    font-size: 32px;
+  }
+
+  nav {
+    height: auto;
+  }
+
+  nav ul {
+    margin: 0 10px;
+  }
+
+  nav li {
+    margin: 5px;
+    font-size: 14px;
+  }
+
+  h1, h2 {
+    font-size: 20px;
+  }
+}
+}
+
+#loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Transparent svart bakgrund */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Högre än andra element */
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.loader {
+  border: 4px solid transparent;
+  border-top: 4px solid #FFCB14; /* Färg på laddningscirkeln */
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+}
+
+/* Animation för att snurra cirkeln */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+#content {
+  display: none; /* Dölja innehållet tills async är klar */
+}
